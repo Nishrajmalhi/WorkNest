@@ -15,14 +15,15 @@ if (!PUBLISHABLE_KEY) {
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ClerkProvider
+   <ClerkProvider
+      publishableKey={PUBLISHABLE_KEY}
       appearance={{
         baseTheme: shadesOfPurple,
       }}
-      publishableKey={PUBLISHABLE_KEY}
-      afterSignInUrl="https://work-nest-two.vercel.app/onboarding"
-      afterSignUpUrl="https://work-nest-two.vercel.app/onboarding"
-      afterSignOutUrl="https://work-nest-two.vercel.app/"
+      navigate={(to) => {
+        const baseUrl = "https://work-nest-two.vercel.app";
+        window.location.href = to.startsWith("/") ? `${baseUrl}${to}` : to;
+      }}
     >
       <App />
     </ClerkProvider>
