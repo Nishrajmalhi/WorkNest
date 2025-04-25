@@ -22,7 +22,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       }}
       frontendApi={FRONTEND_API}
       publishableKey={PUBLISHABLE_KEY}
-      afterSignOutUrl="/"
+      afterSignInUrl="https://work-nest-two.vercel.app/onboarding"
+      afterSignUpUrl="https://work-nest-two.vercel.app/onboarding"
+      afterSignOutUrl="https://work-nest-two.vercel.app/"
     >
       <App />
     </ClerkProvider>
