@@ -7,7 +7,6 @@ import { shadesOfPurple } from "@clerk/themes";
 
 // Import your publishable key
 const PUBLISHABLE_KEY=import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-const FRONTEND_API = import.meta.env.VITE_CLERK_FRONTEND_API;
 
 
 if (!PUBLISHABLE_KEY) {
@@ -20,7 +19,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       appearance={{
         baseTheme: shadesOfPurple,
       }}
-      frontendApi={FRONTEND_API}
       publishableKey={PUBLISHABLE_KEY}
       afterSignInUrl="https://work-nest-two.vercel.app/onboarding"
       afterSignUpUrl="https://work-nest-two.vercel.app/onboarding"
