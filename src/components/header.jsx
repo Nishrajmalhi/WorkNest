@@ -82,8 +82,8 @@ const Header = () => {
           onClick={handleOverlayClick}
         >
           <SignIn
-            signUpForceRedirectUrl="/onboarding"
-            fallbackRedirectUrl="/onboarding"
+            signUpForceRedirectUrl="https://work-nest-two.vercel.app//onboarding"
+            fallbackRedirectUrl="https://work-nest-two.vercel.app//onboarding"
           />
         </div>
       )}
